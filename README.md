@@ -39,3 +39,9 @@ Add model_magic  to installed apps as the last item
   "model_magic",
   ]
 ```
+
+
+## Documentation
+
+[Documentation](https://django-model-magic.readthedocs.io/en/latest/introduction.html)
+
