@@ -1,0 +1,6 @@
+Django==3.2.18
+python-decouple==3.8
+django-split-settings==1.2.0
+requests
+Sphinx==5.3.0
+sphinx-rtd-theme==1.2.0
