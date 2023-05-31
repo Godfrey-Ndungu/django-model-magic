@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+
+  web:
+    build: .
+    command: gunicorn sandbox.wsgi:application --bind 0.0.0.0:8000
+    ports:
+      - "8000"
+    env_file: .env-docker
+    volumes:
+      - .:/code
+    networks:
+      - app_network
+      
+    restart: always
+
+networks:
+  app_network:
+    driver: bridge
