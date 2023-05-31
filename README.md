@@ -17,3 +17,25 @@ By leveraging the capabilities of django-model-magic, you can quickly populate y
 - Customization Options: django-model-magic provides flexible customization options to cater to your specific needs. You can define your own data generation rules and constraints, allowing you to tailor the generated data to suit your application's requirements.
 
 - Time-Saving Solution: With django-model-magic, you can significantly reduce the time and effort required for data entry and testing. The module automates the generation of large datasets, including handling foreign keys, one-to-one relationships, and many-to-many relationships, enabling you to focus on other critical development tasks.
+
+- Database clearing command: Provides a convenient command to clear the database, making it easy to reset and re-populate data during development and testing phases.
+
+- Variation and stress testing: Generate diverse data sets with varying characteristics and volumes to test the scalability and robustness of your Django models and applications.
+
+## Installation
+
+Install with pip
+
+```bash
+  pip install django-model-magic
+```
+
+Add model_magic  to installed apps as the last item
+
+```bash
+  INSTALLED_APPS[
+  #other apps
+  
+  "model_magic",
+  ]
+```
