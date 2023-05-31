@@ -2,9 +2,9 @@ from pathlib import Path
 from decouple import config
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = config('SECRET_KEY', default="dontuseinproduction")
-DEBUG = config('DEBUG', default=False, cast=bool)
-ALLOWED_HOSTS = [config('ALLOWED_HOSTS', default="*")]
+SECRET_KEY = config("SECRET_KEY", default="dontuseinproduction")
+DEBUG = config("DEBUG", default=False, cast=bool)
+ALLOWED_HOSTS = [config("ALLOWED_HOSTS", default="*")]
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -12,7 +12,6 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
 ]
 
 MIDDLEWARE = [
