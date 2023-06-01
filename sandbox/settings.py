@@ -17,7 +17,7 @@ INSTALLED_APPS = [
     "apps.appB",
     "apps.appC",
     "apps.appD",
-    "model_magic"
+    "model_magic",
 ]
 
 MIDDLEWARE = [
