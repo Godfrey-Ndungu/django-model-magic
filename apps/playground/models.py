@@ -8,15 +8,15 @@ class SampleModelWithAllFields(models.Model):
     char_field = models.CharField(max_length=255, blank=True)
     date_field = models.DateField(blank=True)
     datetime_field = models.DateTimeField(blank=True)
-    decimal_field = models.DecimalField(max_digits=10,
-                                        decimal_places=2, blank=True)
+    decimal_field = models.DecimalField(
+        max_digits=10, decimal_places=2, blank=True)
     duration_field = models.DurationField(blank=True)
     email_field = models.EmailField(blank=True)
     file_field = models.FileField(upload_to="files/", blank=True)
     file_path_field = models.FilePathField(path="files/", blank=True)
     float_field = models.FloatField(blank=True)
-    generic_ip_address_field = models.GenericIPAddressField(blank=True,
-                                                            null=True)
+    generic_ip_address_field = models.GenericIPAddressField(
+        blank=True, null=True)
     image_field = models.ImageField(upload_to="images/", blank=True)
     integer_field = models.IntegerField(blank=True)
     json_field = models.JSONField(blank=True)
@@ -30,6 +30,7 @@ class SampleModelWithAllFields(models.Model):
     time_field = models.TimeField(blank=True)
     url_field = models.URLField(blank=True)
     uuid_field = models.UUIDField(blank=True)
+
 
 # auto_field = models.AutoField(primary_key=True)
 # big_auto_field = models.BigAutoField(primary_key=True)
