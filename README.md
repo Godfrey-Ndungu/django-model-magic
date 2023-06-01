@@ -45,3 +45,46 @@ Add model_magic  to installed apps as the last item
 
 [Documentation](https://django-model-magic.readthedocs.io/en/latest/introduction.html)
 
+## Usage
+
+Run the following command to execute the custom command:
+
+```bash
+
+    python manage.py db <command> [options]
+
+```
+
+**Commands:**
+
+- `clear`: Clears the database. You will be prompted to confirm the operation.
+
+```bash
+    python manage.py db clear
+```
+
+- `generate_data`: Generates data for all apps
+
+```bash
+python manage.py db generate_data  
+```
+- `generate_data`: Generates data for a specified app and model with the given number of records with optional commands
+```bash
+python manage.py db generate_data --app_name=<app_name> --model_name=<model_name> --number_of_records=<number>  
+```
+
+- `stress_test`: Performs a stress test operation.
+
+    ```bash
+    python manage.py db stress_test
+    ```
+
+If you need help or want to see a list of allowed arguments, use the following command:
+
+```bash
+    python manage.py db --help
+```
+
+    This command will display the available options and their descriptions.
+
+
