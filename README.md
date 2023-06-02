@@ -57,12 +57,6 @@ Run the following command to execute the custom command:
 
 **Commands:**
 
-- `clear`: Clears the database. You will be prompted to confirm the operation.
-
-```bash
-    python manage.py db clear
-```
-
 - `generate_data`: Generates data for all apps
 
 ```bash

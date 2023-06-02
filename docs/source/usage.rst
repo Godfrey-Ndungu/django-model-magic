@@ -10,12 +10,6 @@ To use the custom command, run the following command in your terminal or command
 Commands
 --------
 
-**clear:** Clears the database. You will be prompted to confirm the operation.
-
-.. code-block:: bash
-
-    python manage.py db clear
-
 **generate_data:** Generates data for all apps.
 
 .. code-block:: bash
