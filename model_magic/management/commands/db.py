@@ -25,25 +25,14 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         command = options["command"]
 
-        if command == "clear":
-            # Clear operation
-            confirm = input(
-                "Are you sure you want to clear the database? (yes/no): ")
-            if confirm.lower() == "yes":
-                # Perform clear operation
-                self.stdout.write(self.style.SUCCESS(
-                    "Database cleared successfully"))
-            else:
-                self.stdout.write(self.style.WARNING("Operation cancelled"))
-
-        elif command == "generate_data":
+        if command == "generate_data":
             app_name = options.get("app_name")
             model_name = options.get("model_name")
             number_of_records = options.get("number_of_records")
 
-            if not app_name or not model_name or not number_of_records:
+            if not number_of_records:
                 raise CommandError(
-                    "Please provide values for app_name,model_name, and number_of_records" # noqa
+                    "Please provide values for number_of_records"
                 )
 
             # Generate data operation
