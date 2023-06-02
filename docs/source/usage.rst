@@ -14,7 +14,7 @@ Commands
 
 .. code-block:: bash
 
-    python manage.py db generate_data
+    python manage.py db generate_data  --number_of_records=<number>
 
 **generate_data:** Generates data for a specified app and model with the given number of records. Optional commands can be added.
 
@@ -23,6 +23,7 @@ Commands
     python manage.py db generate_data --app_name=<app_name> --model_name=<model_name> --number_of_records=<number>
 
 Replace ``<app_name>``, ``<model_name>``, and ``<number>`` with the appropriate values.
+model_name is optional-Data will be generated also for related models wich are not null
 
 Examples:
 
