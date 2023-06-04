@@ -1,52 +1,47 @@
-Usage
-=====
+usage
+===============
 
-To use the custom command, run the following command in your terminal or command prompt:
+generate_data command
+---------------------
+
+This command allows you to generate data for your Django app and model using a single command.
+
+
+To generate data for your Django app and model, use the following command:
 
 .. code-block:: bash
 
-    python manage.py db <command> [options]
+   python manage.py generate_data [app_name] [model_name] number_of_records
 
-Commands
+- ``[app_name]`` (optional): Replace this with the name of your Django app for which you want to generate data. If not provided, data will be generated for all apps.
+- ``[model_name]`` (optional): Replace this with the name of your Django model for which you want to generate data. If not provided, data will be generated for all models within the specified app.
+- ``number_of_records`` (required): Replace this with the number of records you want to generate.
+
+Examples
 --------
 
-**generate_data:** Generates data for all apps.
-
-.. code-block:: bash
-
-    python manage.py db generate_data  --number_of_records=<number>
-
-**generate_data:** Generates data for a specified app and model with the given number of records. Optional commands can be added.
-
-.. code-block:: bash
-
-    python manage.py db generate_data --app_name=<app_name> --model_name=<model_name> --number_of_records=<number>
-
-Replace ``<app_name>``, ``<model_name>``, and ``<number>`` with the appropriate values.
-model_name is optional-Data will be generated also for related models wich are not null
-
-Examples:
-
-- Generate data for the ``myapp`` app, ``mymodel`` model, and generate 10 records:
+- To generate 100 records for all apps and models, run:
 
   .. code-block:: bash
 
-      python manage.py db generate_data --app_name=myapp --model_name=mymodel --number_of_records=10
+     python manage.py generate_data 100
 
-**stress_test:** Performs a stress test operation.
+- To generate 100 records for a specific app, run:
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    python manage.py db stress_test
+     python manage.py generate_data myapp 100
 
-Help
-----
+- To generate 100 records for a specific app and model, run:
 
-To see a list of allowed arguments and their descriptions, use the following command:
+  .. code-block:: bash
 
-.. code-block:: bash
+     python manage.py generate_data myapp MyModel 100
 
-    python manage.py db --help
 
-``--help`` provides detailed information about the available options and how to use them.
+Make sure you replace ``[app_name]``, ``[model_name]``, and ``number_of_records`` with the actual values you want to use.
 
+If you need help or want to see a list of allowed arguments, use the following command:
+
+  .. code-block:: bash
+    python manage.py generate_data --help

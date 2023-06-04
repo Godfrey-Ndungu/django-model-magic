@@ -46,37 +46,41 @@ Add model_magic  to installed apps as the last item
 [Documentation](https://django-model-magic.readthedocs.io/en/latest/introduction.html)
 
 ## Usage
+python manage.py generate_data [app_name] [model_name] number_of_records
 
-Run the following command to execute the custom command:
+- `[app_name]` (optional): Replace this with the name of your Django app for which you want to generate data. If not provided, data will be generated for all apps.
+- `[model_name]` (optional): Replace this with the name of your Django model for which you want to generate data. If not provided, data will be generated for all models within the specified app.
+- `number_of_records` (required): Replace this with the number of records you want to generate.
 
-```bash
+**Examples:**
 
-    python manage.py db <command> [options]
-
-```
-
-**Commands:**
-
-- `generate_data`: Generates data for all apps
+- To generate 100 records for all apps and models, run:
 
 ```bash
-python manage.py db generate_data  
+  python manage.py generate_data 100
 ```
-- `generate_data`: Generates data for a specified app and model with the given number of records with optional commands
+
+- To generate 100 records for a specific app, run:
+
 ```bash
-python manage.py db generate_data --app_name=<app_name> --model_name=<model_name> --number_of_records=<number>  
+  python manage.py generate_data myapp 100
 ```
 
-- `stress_test`: Performs a stress test operation.
+- To generate 100 records for a specific app and model, run:
 
-    ```bash
-    python manage.py db stress_test
-    ```
+```bash
+  python manage.py generate_data myapp MyModel 100
+```
+
+4. The command will execute and generate the specified number of records for the app and model you provided.
+
+**Note:** Make sure you replace `[app_name]`, `[model_name]`, and `number_of_records` with the actual values you want to use.
+
 
 If you need help or want to see a list of allowed arguments, use the following command:
 
 ```bash
-    python manage.py db --help
+    python manage.py generate_data --help
 ```
 
     This command will display the available options and their descriptions.
